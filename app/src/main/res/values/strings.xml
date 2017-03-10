@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">ProductHuntSimpleClient</string>
+    <string name="no_posts_today">No posts for today</string>
+    <string name="somethings_wrong">Oops. Something\'s went wrong…</string>
+    <string name="loading_error">Loading error</string>
+    <string name="loading_progress">Loading…</string>
+    <string name="notification_new_post">New post: %s</string>
+    <string name="notification_new_posts">New posts</string>
+    <string name="notification_no_new_posts_on">No new posts on %s</string>
+    <string name="notification_new_posts_count">%d new posts</string>
+</resources>

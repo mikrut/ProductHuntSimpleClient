@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="ru.bmstu.iu6.producthuntsimpleclient">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".activities.CategoryActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activities.ProductActivity" />
+        <activity android:name=".activities.PickCategoryActivity"
+            android:label="Pick category"/>
+
+        <service
+            android:name=".scheduler.CheckNewPostsService"
+            android:enabled="true"
+            android:exported="true"></service>
+
+        <receiver android:name=".scheduler.BootReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="ru.bmstu.iu6.producthuntsimpleclient.scheduler.BootReceiver.ACTION_UPDATE" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>
